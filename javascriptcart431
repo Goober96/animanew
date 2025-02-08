@@ -1,0 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutItems = document.getElementById("checkout-items");
+    const checkoutTotal = document.getElementById("checkout-total");
+
+    // Load cart from local storage
+    let cart = JSON.parse(localStorage.getItem("cart")) || { items: [], totalPrice: 0 };
+
+    // Display cart items
+    checkoutItems.innerHTML = "";
+    cart.items.forEach(item => {
+        let listItem = document.createElement("p");
+        listItem.textContent = `${item.productName} - $${item.productPrice.toFixed(2)}`;
+        checkoutItems.appendChild(listItem);
+    });
+
+    // Show total price
+    checkoutTotal.textContent = `$${cart.totalPrice.toFixed(2)}`;
+
+    // Handle checkout form submission
+    document.getElementById("checkout-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Purchase completed! Thank you for shopping with Creek Lure Co.");
+        localStorage.removeItem("cart"); // Clear cart after purchase
+        window.location.href = "index.html"; // Redirect back to home page
+    });
+});
