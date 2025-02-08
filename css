@@ -1,0 +1,17 @@
+/* Checkout Button */
+.checkout-button {
+    display: none; /* Hidden until items are in the cart */
+    background-color: #008080;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.checkout-button:hover {
+    background-color: #006666;
+}
