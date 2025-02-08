@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creek Lure Co. offers handcrafted fishing lures perfect for your next catch.">
+    <meta name="keywords" content="fishing lures, handmade, Creek Lure Co., fishing, tackle">
+    <meta name="robots" content="index, follow">
+    <title>Creek Lure Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- Animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome for icons -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Handcrafted Lures for the Perfect Catch</h1>
+            <p>Catch your biggest fish yet with our handmade fishing lures!</p>
+            <button class="cta-button">Shop Now</button>
+        </div>
+        <div class="hero-image" data-aos="fade-in">
+            <img src="your-hero-image.jpg" alt="Fishing Lures" />
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product-item" data-aos="fade-up">
+                <img src="product1.jpg" alt="Fishing Lure 1" />
+                <h3>Fishing Lure 1</h3>
+                <p class="price">$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-aos="fade-up">
+                <img src="product2.jpg" alt="Fishing Lure 2" />
+                <h3>Fishing Lure 2</h3>
+                <p class="price">$18.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <h2>Fishing Tips and Blog</h2>
+        <div class="blog-post">
+            <h3>Tip of the Week</h3>
+            <p>Learn about the best fishing techniques...</p>
+        </div>
+    </section>
+
+    <!-- Cart Icon and Cart Details -->
+    <div class="cart-container">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="cart-details">
+            <h3>Your Cart</h3>
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <ul id="cart-items-list"></ul>
+        </div>
+    </div>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="footer">
+        <p>Contact us at: info@creeklure.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
