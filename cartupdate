@@ -1,0 +1,12 @@
+<div class="cart-container">
+    <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </div>
+    <div class="cart-details">
+        <h3>Your Cart</h3>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+        <ul id="cart-items-list"></ul>
+        <button id="checkout-button" class="checkout-button">Proceed to Checkout</button> <!-- New Checkout Button -->
+    </div>
+</div>
