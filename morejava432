@@ -1,0 +1,31 @@
+let cart = {
+    items: [],
+    totalPrice: 0,
+    addItem: function(productName, productPrice) {
+        this.items.push({ productName, productPrice });
+        this.totalPrice += productPrice;
+        this.updateCartDisplay();
+        localStorage.setItem("cart", JSON.stringify(this)); // Save cart
+    },
+    updateCartDisplay: function() {
+        document.getElementById("cart-count").textContent = this.items.length;
+        document.getElementById("cart-total").textContent = `$${this.totalPrice.toFixed(2)}`;
+
+        const checkoutButton = document.getElementById("checkout-button");
+        if (this.items.length > 0) {
+            checkoutButton.style.display = "block";
+        } else {
+            checkoutButton.style.display = "none";
+        }
+    }
+};
+
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", function () {
+        const productItem = button.closest(".product-item");
+        const productName = productItem.querySelector("h3").textContent;
+        const productPrice = parseFloat(productItem.querySelector(".price").textContent.replace("$", ""));
+
+        cart.addItem(productName, productPrice);
+    });
+});
